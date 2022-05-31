@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workouts</title>
+  </head>
+  {% extends "workoutApp/base.html" %}
+  {% block content %}
+  <body>
+    {% if messages %} {% for message in messages %}
+        <p style="color: green; font-weight: bold">{{ message }}</p>
+    {% endfor %} {% endif %}
+
+    <p>Total of <strong> {{ data|length }} </strong> workouts</p>
+
+    <table>
+      {% for key, value in data.items reversed %}
+      <tr>
+        <td><strong> {{ value.date }} </strong></td>
+      </tr>
+      <tr>
+        <td><strong> {{ value.type }} harjoitus</strong></td>
+      </tr>
+      <tr>
+        <td><strong> Kesto {{ value.workoutLength }} min. </strong></td>
+      </tr>
+      <tr>
+        <td>{{ value.workout1 }}</td>
+      </tr>
+      <tr>
+        <td>{{ value.workout2 }}</td>
+      </tr>
+      <tr>
+        <td>{{ value.workout3 }}</td>
+      </tr>
+      <tr>
+        <td>{{ value.workout4 }}</td>
+      </tr>
+      <tr>
+        <td>{{ value.workout5 }}</td>
+      </tr>
+      <tr>
+        <td>{{ value.workout6 }}</td>
+      </tr>
+      <tr>
+        <td>{{ value.workout7 }}</td>
+      </tr>
+      <tr>
+        <td>{{ value.workout8 }}</td>
+      </tr>
+      <tr>
+        <td>{{ value.workout9 }}</td>
+      </tr>
+      <tr>
+        <td>{{ value.workout10 }}</td>
+      </tr>
+      <tr>
+        <td>{{ value.workout11 }}</td>
+      </tr>
+      <tr>
+        <td>{{ value.workout12 }}</td>
+      </tr>
+      <tr>
+        <td>
+          <form method="POST" action="remove">
+            {% csrf_token %}
+              <input name="id" type="hidden" value="{{ key }}">
+          <input type="submit" value="Delete" />
+        </form>
+        </td>
+      </tr>
+      <tr>
+        <td>---------------------------</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+  {% endblock content %}
+</html>

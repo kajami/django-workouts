@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-9">
+    <meta name="viewport" content="width=device-width, initial-scale=9.0">
+    <title>Add new workout</title>
+</head>
+{% extends "workoutApp/base.html" %}
+{% block content %}
+    <body>
+        <form method="post"> 
+            {% csrf_token %}
+            <label for="date">Date</label>
+                <input type="text" class="form-control" value="30/05/2022" name="date" placeholder="DD/MM/YYYY"><br>
+            <label for="type">Type</label>
+                <select name="type">
+                    <option name="Aerobinen">Aerobinen</option>
+                    <option name="Ylävartalo">Ylävartalo</option>
+                    <option name="Alavartalo">Alavartalo</option>
+                    <option name="Yksijakoinen">Yksijakoinen</option>
+                    <option name="Muu">Muu</option>
+                </select><br>
+            <label for="workoutLength">Length</label>
+              <input type="number" class="form-control" value="60" name="workoutLength" placeholder="Enter length of workout"><br>
+            <label for="workout1">Workout</label>
+              <input type="text" class="form-control" value="" name="workout1" placeholder="Enter a workout"><br>
+            <label for="workout2">Workout</label>
+              <input type="text" class="form-control" value="" name="workout2" placeholder="Enter a workout"><br>
+            <label for="workout3">Workout</label>
+              <input type="text" class="form-control" value="" name="workout3" placeholder="Enter a workout"><br>
+            <label for="workout4">Workout</label>
+              <input type="text" class="form-control" value="" name="workout4" placeholder="Enter a workout"><br>
+            <label for="workout5">Workout</label>
+              <input type="text" class="form-control" value="" name="workout5" placeholder="Enter a workout"><br>
+            <label for="workout6">Workout</label>
+              <input type="text" class="form-control" value="" name="workout6" placeholder="Enter a workout"><br>
+            <label for="workout7">Workout</label>
+              <input type="text" class="form-control" value="" name="workout7" placeholder="Enter a workout"><br>
+            <label for="workout8">Workout</label>
+              <input type="text" class="form-control" value="" name="workout8" placeholder="Enter a workout"><br>
+            <label for="workout9">Workout</label>
+              <input type="text" class="form-control" value="" name="workout9" placeholder="Enter a workout"><br>
+            <label for="workout10">Workout</label>
+              <input type="text" class="form-control" value="" name="workout10" placeholder="Enter a workout"><br>
+            <label for="workout11">Workout</label>
+              <input type="text" class="form-control" value="" name="workout11" placeholder="Enter a workout"><br>
+            <label for="workout12">Workout</label>
+              <input type="text" class="form-control" value="" name="workout12" placeholder="Enter a workout"><br>
+            <input type="submit" value="Save"> 
+        </form>
+    </body>
+{% endblock content %}
+</html>
