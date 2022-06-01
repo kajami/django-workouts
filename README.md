@@ -15,5 +15,12 @@ git clone https://github.com/kajami/django-workouts.git
 virtualenv --system-site-packages -p python3 env
 source env/bin/activate
 
-3. Install packages
-4. 
+3. Install packages with pip
+pip install django-admin
+pip install pyrebase4
+pip install python-dotenv
+
+Or you can create requirements.txt with package names and use "pip install requirements.txt"
+
+4.Run app at localhost:8000/
+locate folder with manage.py and run "python manage.py runserver"
