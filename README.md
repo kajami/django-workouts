@@ -19,7 +19,6 @@ source env/bin/activate
 pip install django-admin
 pip install pyrebase4
 pip install python-dotenv
-
 Or you can create requirements.txt with package names and use "pip install requirements.txt"
 
 4.Run app at localhost:8000/
